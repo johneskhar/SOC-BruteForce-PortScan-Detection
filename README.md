@@ -12,7 +12,7 @@ It demonstrates skills in log collection, threat simulation, detection engineeri
 
 ## Lab Architecture
 The following diagram shows how the SOC lab environment is structured:
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6ac65b6b-23ce-4b24-a258-4174c49c12bf" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/6ac65b6b-23ce-4b24-a258-4174c49c12bf" />
 
 ## Attack Simulations
 - **SSH Brute Force** → Hydra
