@@ -10,5 +10,5 @@ nmap -sS -p- <Ubuntu-IP>
 ```
 ### Network Enumeration / Port Probing
 ```bash
-nmap -A <ubuntu-vm-ip>
+nmap -A <Ubuntu-IP>
 ```
