@@ -3,7 +3,7 @@
 ## 1. Lab Architecture  
 This diagram shows the flow of logs in the SOC lab setup. Logs are collected from the Ubuntu VM by the Splunk Universal Forwarder and ingested into Splunk Enterprise. Attacks are simulated from Kali Linux.  
 
-(<img width="600" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37"/>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37"/>
 
 ---
 
