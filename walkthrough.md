@@ -3,7 +3,7 @@
 ## 1. Lab Architecture  
 This diagram shows the flow of logs in the SOC lab setup. Logs are collected from the Ubuntu VM by the Splunk Universal Forwarder and ingested into Splunk Enterprise. Attacks are simulated from Kali Linux.  
 
-(<img width="800" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37"/>
+(<img width="600" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37"/>
 
 ---
 
@@ -28,12 +28,12 @@ This dashboard visualizes firewall logs from `/var/log/ufw.log`. It helps identi
 ### Hydra Brute Force Attack  
 Hydra was used from Kali Linux to attempt multiple SSH logins on the Ubuntu VM. This generates repeated failed login attempts visible in Splunk.  
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/7895c8d4-c559-4431-9f85-c15443d66581"/>
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/582ecc1f-15cc-4102-93fb-a36b57479dcb"/>
 
 ### Nmap Port Scan  
 Nmap was used from Kali Linux to scan open ports on the Ubuntu VM. This activity generates UFW logs, showing repeated connection attempts across many ports.  
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/b28cf47c-c90b-4a50-8de9-0ea0d7d0df76"/>
+<img width="500" alt="image" src="Screenshot 2025-08-24 000547" src="https://github.com/user-attachments/assets/3b22333b-0e79-45a7-9f36-359a797cda91"/>
 
 ---
 
@@ -49,7 +49,7 @@ index=main "Failed password"
 | stats count by SRC user 
 | where count > 5
 ```
-<img width="800" height="793" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af"/>
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af"/>
 
 ### Port Scan Alert  
 This alert identifies potential port scanning activity by detecting multiple unique destination ports accessed by the same source IP in a short time. 
@@ -60,6 +60,6 @@ index=main SRC=* DST=*
 | stats dc(DST_PORT) as unique_ports by SRC 
 | where unique_ports > 10
 ```
-<img width="800" height="799" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0"/>
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0"/>
 
 
