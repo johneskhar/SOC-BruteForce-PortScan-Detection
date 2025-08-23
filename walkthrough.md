@@ -49,7 +49,7 @@ index=main "Failed password"
 | stats count by SRC user 
 | where count > 5
 ```
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af"/>
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af"/>
 
 ### Port Scan Alert  
 This alert identifies potential port scanning activity by detecting multiple unique destination ports accessed by the same source IP in a short time. 
@@ -60,6 +60,6 @@ index=main SRC=* DST=*
 | stats dc(DST_PORT) as unique_ports by SRC 
 | where unique_ports > 10
 ```
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0"/>
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0"/>
 
 
