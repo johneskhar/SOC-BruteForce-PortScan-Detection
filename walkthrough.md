@@ -33,7 +33,7 @@ Hydra was used from Kali Linux to attempt multiple SSH logins on the Ubuntu VM. 
 ### Nmap Port Scan  
 Nmap was used from Kali Linux to scan open ports on the Ubuntu VM. This activity generates UFW logs, showing repeated connection attempts across many ports.  
 
-<img width="500" alt="image" src="Screenshot 2025-08-24 000547" src="https://github.com/user-attachments/assets/3b22333b-0e79-45a7-9f36-359a797cda91"/>
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/3b22333b-0e79-45a7-9f36-359a797cda91"/>
 
 ---
 
