@@ -37,3 +37,6 @@ It demonstrates skills in log collection, threat simulation, detection engineeri
 - Add more attack simulations (DoS, reverse shell detection, malware)
 - Integrate with another SIEM (ELK, Graylog)
 - Automate alerting via email/webhook
+
+## Documentation
+For a step-by-step guide of the lab setup, attack simulation, detections, dashboards, and alerts, see the [Walkthrough](walkthrough.md)
