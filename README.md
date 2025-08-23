@@ -39,4 +39,4 @@ It demonstrates skills in log collection, threat simulation, detection engineeri
 - Automate alerting via email/webhook
 
 ## Documentation
-For a step-by-step guide of the lab setup, attack simulation, detections, dashboards, and alerts, see the [Walkthrough](walkthrough.md)
+For a step-by-step guide of the lab setup, attack simulation, detections, dashboards, and alerts, see the [walkthrough](walkthrough.md).
