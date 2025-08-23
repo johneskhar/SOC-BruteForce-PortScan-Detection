@@ -3,7 +3,7 @@
 ## 1. Lab Architecture  
 This diagram shows the flow of logs in the SOC lab setup. Logs are collected from the Ubuntu VM by the Splunk Universal Forwarder and ingested into Splunk Enterprise. Attacks are simulated from Kali Linux.  
 
-![Lab Architecture](<img width="800" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37" />)
+(<img width="800" alt="image" src="https://github.com/user-attachments/assets/e5b04649-4185-4101-bc3a-793c5e4a9e37"/>
 
 ---
 
@@ -12,14 +12,14 @@ This diagram shows the flow of logs in the SOC lab setup. Logs are collected fro
 ### SSH / Brute Force Dashboard  
 This dashboard visualizes authentication logs from `/var/log/auth.log`. It highlights failed and successful SSH login attempts and is useful to detect brute force patterns.  
 
-![SSH Dashboard](<img width="800"  alt="redacted-image (1)" src="https://github.com/user-attachments/assets/7bb2318b-5d00-415e-8c58-8f0ddc1ba2f3" />
-)
+<img width="800"  alt="redacted-image (1)" src="https://github.com/user-attachments/assets/7bb2318b-5d00-415e-8c58-8f0ddc1ba2f3"/>
+
 
 ### Network Activity Dashboard  
 This dashboard visualizes firewall logs from `/var/log/ufw.log`. It helps identify port scans and abnormal network activity.  
 
-![Network Dashboard](<img width="800" alt="redacted-image" src="https://github.com/user-attachments/assets/c5be44eb-9832-49a7-947c-6a408410597e" />
-)
+<img width="800" alt="redacted-image" src="https://github.com/user-attachments/assets/c5be44eb-9832-49a7-947c-6a408410597e"/>
+
 
 ---
 
@@ -28,14 +28,12 @@ This dashboard visualizes firewall logs from `/var/log/ufw.log`. It helps identi
 ### Hydra Brute Force Attack  
 Hydra was used from Kali Linux to attempt multiple SSH logins on the Ubuntu VM. This generates repeated failed login attempts visible in Splunk.  
 
-![Hydra Attack](<img width="800" alt="image" src="https://github.com/user-attachments/assets/7895c8d4-c559-4431-9f85-c15443d66581" />
-)
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/7895c8d4-c559-4431-9f85-c15443d66581"/>
 
 ### Nmap Port Scan  
 Nmap was used from Kali Linux to scan open ports on the Ubuntu VM. This activity generates UFW logs, showing repeated connection attempts across many ports.  
 
-![Nmap Attack](<img width="800" alt="image" src="https://github.com/user-attachments/assets/b28cf47c-c90b-4a50-8de9-0ea0d7d0df76" />
-)
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/b28cf47c-c90b-4a50-8de9-0ea0d7d0df76"/>
 
 ---
 
@@ -51,7 +49,7 @@ index=main "Failed password"
 | stats count by SRC user 
 | where count > 5
 ```
-![Brute Force Alert](<img width="800" height="793" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af" />)
+<img width="800" height="793" alt="image" src="https://github.com/user-attachments/assets/68eade5a-bd4e-4c94-b851-54dac9c830af"/>
 
 ### Port Scan Alert  
 This alert identifies potential port scanning activity by detecting multiple unique destination ports accessed by the same source IP in a short time. 
@@ -62,6 +60,6 @@ index=main SRC=* DST=*
 | stats dc(DST_PORT) as unique_ports by SRC 
 | where unique_ports > 10
 ```
-![Port Scan Alert](<img width="800" height="799" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0" />
-)
+<img width="800" height="799" alt="image" src="https://github.com/user-attachments/assets/ecbbb238-47fb-46b1-918a-797ae21301d0"/>
+
 
